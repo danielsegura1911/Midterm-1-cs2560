@@ -1,0 +1,60 @@
+#include <iostream>
+
+
+class number3{
+private:
+	int size = 1;
+	float input;
+	int position;
+	float arr[size];
+	float temp;
+	float i;
+
+public:
+
+	number3(float arr);
+	~number3();
+
+	int store() {
+		arr[position] = input;
+	}
+
+	int getNumber() {
+		i = arr[position];
+		return i;
+	}
+
+	int getHighest() {
+		i = arr[0];
+		position = 1;
+		temp = arr[position];
+		if (i > temp) {
+			return i;
+		}
+		else {
+			i = temp;
+			position++;
+		}
+		
+	}
+
+	int getLowest() {
+		i = arr[0];
+		position = 1;
+		temp = arr[position];
+		if (i < temp) {
+			return i;
+		}
+		else {
+			i = temp;
+			position++;
+		}
+	}
+	number3::~number3() {
+		delete[]arr;
+	}
+
+};
+
+int main() {
+}
