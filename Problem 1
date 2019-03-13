@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int row(){
+    int input;
+    printf("Enter the amount of cololomns and rows you would like to see");
+    scanf("%d", &input);
+    int map[input][input];
+    int second = 0;
+    for(int count1 = 0; count1 < input; count1++){
+        second++;
+        int first = 1;
+        for(int count2 = 0; count2 < input; count2++){
+            map[count1][count2] = first * second;
+            first++;
+        }
+    }
+    for(int count = 0; count < input; count++){
+        for(int cout = 0; cout < input; cout++){
+            int i = map[count][cout];
+            printf("%d ", i);
+        }
+        printf("\n");
+    }
+} 
+
+
+int main(){
+	row();
+	
+}
